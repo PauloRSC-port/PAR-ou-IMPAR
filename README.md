@@ -1,37 +1,19 @@
-import random
-print("----- VAMOS JOGAR PAR OU ÍMPAR -----")
-pc = random.randint(1,11)
-maq = 'PAR', 'IMPAR'
-perg = 'PAR', 'IMPAR' 
-user = soma = resultado = 0
-win = 0
-while True:
-    perg = str(input("Escolha PAR ou ÍMPAR:  ")).strip().upper()
-    if perg not in ['PAR', 'IMPAR']:
-        print("----- ESCOLHA INVÁLIDA -----\nEscolha entre PAR OU ÍMPAR.")
-        perg = str(input("Escolha PAR ou ÍMPAR:  ")).strip().upper()
-    user = int(input("Agora escolha um número: "))
-    soma += user + pc
-    win += 1
-    if perg == 'PAR':
-        maq == 'ÍMPAR'
-        if soma % 2 == 0:
-            print(f"Sua escolha foi {user} e a máquina escolheu {pc}.")
-            print(f"VOCÊ VENCEU!!!!\nEssa é sua quantidade de vitórias {win}.")
-        elif soma % 2 == 1:
-            print(f"Sua escolha foi {user} e a máquina escolheu {pc}.")
-            print("A máquina VENCEU!!!! HAHAHAHAHAHA")
-            break             
-    elif perg == 'IMPAR':
-        maq == 'PAR'
-        if soma % 2 == 0:
-            print(f"Sua escolha foi {user} e a máquina escolheu {pc}.")
-            print("A máquina VENCEU!!!! HAHAHAHAHAHA")
-            break
-        elif soma % 2 == 1:
-            print(f"Sua escolha foi {user} e a máquina escolheu {pc}.")
-            print(f"VOCÊ VENCEU!!!!\nEssa é sua quantidade de vitórias {win}.")
-print("-=-=-=-=-=- FIM -=-=-=-=-=-")            
-            
+🎮 Jogo de Par ou Ímpar em Python
+Este projeto é um jogo interativo de Par ou Ímpar desenvolvido em Python. O usuário escolhe entre "Par" ou "Ímpar" e, em seguida, seleciona um número. O programa gera um número aleatório para o computador e determina o vencedor com base na soma dos valores.
 
+🔹 Como Funciona?
+1️⃣ O usuário escolhe entre "Par" ou "Ímpar".
+2️⃣ O programa gera um número aleatório para a máquina (entre 1 e 11).
+3️⃣ O usuário insere um número.
+4️⃣ A soma dos números define o resultado:
 
+Se for par e o jogador escolheu "Par", ele vence.
+Se for ímpar e o jogador escolheu "Ímpar", ele vence.
+Caso contrário, a máquina vence e o jogo termina.
+5️⃣ O jogo continua até que o jogador perca, contabilizando vitórias consecutivas.
+🛠️ Tecnologias e Conceitos Utilizados
+✅ Módulo random → Geração de números aleatórios para a máquina.
+✅ Loop while True → Mantém o jogo rodando até que o jogador perca.
+✅ Estruturas Condicionais (if-elif) → Verificação da escolha do usuário e determinação do vencedor.
+✅ Entrada de Dados (input) → Interação com o jogador.
+✅ Manipulação de Strings → Transformação de texto em maiúsculas para evitar erros de digitação.
